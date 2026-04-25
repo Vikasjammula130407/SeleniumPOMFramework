@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="OpeCart Test automtion regression suite" verbose="3" parallel="tests" thread-count="3">
+
+ <listeners>
+		<listener class-name="com.aventstack.chaintest.plugins.ChainTestListener" />
+		<listener class-name="com.org.opencart.qa.listeners.TestAllureListener" />
+		<listener class-name="com.org.opencart.qa.listeners.AnnotationTransformer" />
+	</listeners>
+
+	<test name="Login Page Testing">
+	<parameter name="browser" value="edge"/>
+		<classes>
+			<class name="com.org.opencart.qa.tests.LoginPageTest" />
+		</classes>
+	</test>
+	<test name="Home Page Testing">
+	<parameter name="browser" value="chrome"/>
+		<classes>
+			<class name="com.org.opencart.qa.tests.HomePageTest" />
+		</classes>
+	</test>
+	<test name="Product Information Page Testing">
+	<parameter name="browser" value="chrome"/>
+		<classes>
+			<class name="com.org.opencart.qa.tests.ProductInformationPageTest" />
+		</classes>
+	</test>
+	<test name="Register Page Testing">
+	<parameter name="browser" value="chrome"/>
+		<classes>
+			<class name="com.org.opencart.qa.tests.RegisterPageTest" />
+		</classes>
+	</test>
+
+</suite>
