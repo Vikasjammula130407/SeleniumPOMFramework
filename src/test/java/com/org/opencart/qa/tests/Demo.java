@@ -5,5 +5,6 @@ public class Demo
 
 	
 	int v=33;
+	int k =44;
 	
 }
